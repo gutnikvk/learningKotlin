@@ -1,3 +1,4 @@
+import entities.Developer
 import entities.Person
 import entities.Manager
 import java.io.FileInputStream
@@ -9,11 +10,17 @@ fun main() {
     val bob = Person(
         name = "Bob Smith",
         age = 42,
-        job = Person.Job.MIDDLE_DEV,
         pay = 115000.00
     )
-    val john = Manager("John Dorian", 32, Person.Job.TEAM_LEAD, 150000.00, 75.512)
+    val john = Manager("John Dorian", 32, Manager.Job.TEAM_LEAD,150000.00)
+    val alice = Developer(
+        name = "Alice Morgan",
+        age = 25,
+        job = Developer.Job.JUNIOR_DEV,
+        pay = 80000.00
+    )
     println(john.toString())
+    println(alice.toString())
     writePersonToFile(bob)
     println(readPersonFromFile().toString())
     readLine()
