@@ -6,10 +6,10 @@ fun main() {
 }
 
 private fun getFibonacciNumber(n: Int): Int {
-    var fibonacciRow = emptyArray<Int>()
+    var fibonacciRow = mutableListOf<Int>()
     for (i in 0..n) {
-        if (i<=1) fibonacciRow += i
-        else fibonacciRow += fibonacciRow[i-1] + fibonacciRow[i-2]
+        if (i<=1) fibonacciRow.add(i)
+        else fibonacciRow.add(fibonacciRow[i-1] + fibonacciRow[i-2])
     }
     return fibonacciRow[n]
 }
