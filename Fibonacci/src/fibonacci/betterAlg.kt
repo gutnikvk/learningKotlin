@@ -1,3 +1,5 @@
+package fibonacci
+
 fun main() {
     println("Input a non-negative integer")
     val n: Int = readLine()?.toInt() ?: throw IllegalArgumentException("Got no input")
